@@ -77,3 +77,4 @@ while dt.datetime.now().hour != 22 and start_program:
 # 4) Your own Twilio credentials. 
 # 5) You can also change the frequency and timing of the puppy text as you wish.
 # 6) This code is designed to run on PythonAnywhere or other cloud services. 
+# for more of my codes and fun games, please visit: https://github.com/thlouieshi?tab=repositories
