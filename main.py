@@ -44,11 +44,11 @@ for i in new_weather_id:
     if 500 <= i <= 600:
         rain_hour = new_weather_id.index(i) + dt.datetime.now().hour  # the index plus the current hour is the hour that it will start/stop raining/snowing/ 
         rain_hour_list.append(rain_hour)  # put the rain hours in a list
-        text.weather_message = f"It will rain today at {rain_hour_list[0]} and ends at {rain_hour_list[-1]}."  # obtain the first and last element in rain showers.
+        text.weather_message = f"It will rain today at {rain_hour_list[0]} and ends at {rain_hour_list[-1]}."  # obtain the first and last items in rain showers.
     elif 600 <= i <= 700:
         snow_hour = new_weather_id.index(i) + dt.datetime.now().hour  # if it starts to rain/snow now, the index will be 0, and hour will just be the current hour.
         snow_hour_list.append(snow_hour)  # put the snow hours in a list
-        text.weather_message = f"It will snow today at {snow_hour_list[0]} and ends at {snow_hour_list[-1]}."
+        text.weather_message = f"It will snow today at {snow_hour_list[0]} and ends at {snow_hour_list[-1]}."  # the first and last items on the list indicate the start and end of the rain/snow hours.
 
 # Compiling both rain and snow hours into one list allows me to solve the bug occurs when it rains and snows on the same day.
 # It is also a simple way to ensure the rain and snow hours stays in the order which they occur.
@@ -57,7 +57,7 @@ if len(rain_hour_list) > 0 and len(snow_hour_list) > 0:
     text.weather_message = f"It will rain and snow today. Rain starts at {rain_hour_list[0]} and ends at {rain_hour_list[-1]}," \
                            f"snow starts at {snow_hour_list[0]} and ends at {snow_hour_list[-1]}. "
 
-text.weather_text()  # call the weather text function from Text class after the text message has been configured. 
+text.weather_text()  # call the weather text function from Text class after the text message has been configured in the above codes.
 
 # the following code is for puppy text, I want my program start around 6, when I first wake up.
 start_program = False
@@ -65,6 +65,7 @@ if dt.datetime.now().hour >= 6:
     start_program = True
 
 # Using a while loop to allow the program to run continuously, set the program to start at 8 am and stop at the 10 pm at night
+# Please note this program is designed to run on PythonAnywhere or other cloud services. 
 # you can change change the hour, minute, second, & microsecond to any time you want. Text will only be sent when its an exact match.
 while dt.datetime.now().hour != 22 and start_program:
     if dt.datetime.now().hour % 2 == 0 and dt.datetime.now().minute == 10 and dt.datetime.now().second == 16 and dt.datetime.now().second == 84966:
