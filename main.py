@@ -79,3 +79,6 @@ while dt.datetime.now().hour != 22 and start_program:
 # 6) This code is designed to run on PythonAnywhere or other cloud services. 
 # For more of my projects, fun games and useful applicatons, 
 # please visit: https://github.com/thlouieshi?tab=repositories
+# For example, a blackjack game:
+# https://github.com/thlouieshi/black_jack_card_game/edit/main/main.py
+# You can also play the game here: https://replit.com/@LouieShi/BlackJack-Card#main.py
