@@ -42,11 +42,11 @@ rain_hour_list = []
 snow_hour_list = []
 for i in new_weather_id:
     if 500 <= i <= 600:
-        rain_hour = new_weather_id.index(i) + dt.datetime.now().hour
+        rain_hour = new_weather_id.index(i) + dt.datetime.now().hour  # the index plus the current hour is the hour that it will start/stop raining/snowing/ 
         rain_hour_list.append(rain_hour)  # put the rain hours in a list
         text.weather_message = f"It will rain today at {rain_hour_list[0]} and ends at {rain_hour_list[-1]}."  # obtain the first and last element in rain showers.
     elif 600 <= i <= 700:
-        snow_hour = new_weather_id.index(i) + dt.datetime.now().hour
+        snow_hour = new_weather_id.index(i) + dt.datetime.now().hour  # if it starts to rain/snow now, the index will be 0, and hour will just be the current hour.
         snow_hour_list.append(snow_hour)  # put the snow hours in a list
         text.weather_message = f"It will snow today at {snow_hour_list[0]} and ends at {snow_hour_list[-1]}."
 
