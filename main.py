@@ -81,5 +81,5 @@ while dt.datetime.now().hour != 22 and start_program:
 # For more of my projects, fun games and useful applicatons, 
 # please visit: https://github.com/thlouieshi?tab=repositories
 # For example, a blackjack game:
-# https://github.com/thlouieshi/black_jack_card_game/edit/main/main.py
+# https://github.com/thlouieshi/black_jack_card_game/blob/main/main.py
 # You can also play the game here: https://replit.com/@LouieShi/BlackJack-Card#main.py
